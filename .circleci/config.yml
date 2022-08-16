@@ -10,7 +10,7 @@ jobs:
       - matlab/install
       - matlab/run-tests:
           source-folder: code
-          code-coverage-cobertura: "true"
+          code-coverage-cobertura: code-coverage/coverage.xml
 
       # As an alternative to run-tests, you can use run-command to execute a MATLAB script, function, or statement.
       # - matlab/run-command:
