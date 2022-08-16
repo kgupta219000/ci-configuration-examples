@@ -8,8 +8,9 @@ jobs:
     steps:
       - checkout
       - matlab/install
-      - matlab/run-command:
-          command: HelloWorld
+      - matlab/run-tests:
+          source-folder: code
+          code-coverage-cobertura: yes
 
       # As an alternative to run-tests, you can use run-command to execute a MATLAB script, function, or statement.
       # - matlab/run-command:
