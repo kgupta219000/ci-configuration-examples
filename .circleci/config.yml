@@ -6,14 +6,15 @@ jobs:
     machine:
       image: ubuntu-2004:202201-02
       
-    #working_directory: /tmp
     steps:
       - checkout
       
       #- run:
        #   name: Creating Dummy Artifacts
         #  command: |
-         #   mkdir /test-results;
+          #echo "my artifact file" > /tmp/art-1;
+          #mkdir /tmp/artifacts;
+          #echo "my artifact files in a dir" > /tmp/artifacts/art-2;
 
       #- store_artifacts:
       #    path: /tmp/art-1
