@@ -28,6 +28,7 @@ jobs:
           test-results-junit: test-results/matlab/results.xml
       - store_test_results:
           path: test-results
+          destination: artifact-file
 
       # As an alternative to run-tests, you can use run-command to execute a MATLAB script, function, or statement.
       # - matlab/run-command:
