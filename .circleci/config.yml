@@ -8,7 +8,7 @@ jobs:
       
     working_directory: /tmp
     steps:
-      #- checkout
+      - checkout
       
       - run:
           name: Creating Dummy Artifacts
@@ -17,19 +17,19 @@ jobs:
             mkdir /tmp/artifacts;
             echo "my artifact files in a dir" > /tmp/artifacts/art-2;
 
-      - store_artifacts:
-          path: /tmp/art-1
-          destination: artifact-file
+      #- store_artifacts:
+      #    path: /tmp/art-1
+      #    destination: artifact-file
 
-      - store_artifacts:
-          path: /tmp/artifacts
+      #- store_artifacts:
+      #    path: /tmp/artifacts
 
       - matlab/install
       - matlab/run-tests:
           source-folder: code
           test-results-junit: test-results/results.xml
       - store_test_results:
-          path: test-results
+          path: /tmp/test-results
 
       # As an alternative to run-tests, you can use run-command to execute a MATLAB script, function, or statement.
       # - matlab/run-command:
