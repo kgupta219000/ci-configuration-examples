@@ -26,7 +26,7 @@ jobs:
       - matlab/run-tests:
           source-folder: code
           test-results-junit: test-results/matlab/results.xml
-      - store_test_results:
+      - store_artifacts:
           path: /test-results
           destination: artifact-file
 
