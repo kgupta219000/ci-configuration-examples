@@ -8,7 +8,7 @@ jobs:
       
     working_directory: /tmp
     steps:
-      - checkout
+      #- checkout
       
       - run:
           name: Creating Dummy Artifacts
@@ -27,9 +27,9 @@ jobs:
       - matlab/install
       - matlab/run-tests:
           source-folder: code
-          test-results-junit: /.tmp/test-results/results.xml
+          test-results-junit: /tmp/test-results/results.xml
       - store_test_results:
-          path: /.tmp/test-results
+          path: /tmp/test-results
 
       # As an alternative to run-tests, you can use run-command to execute a MATLAB script, function, or statement.
       # - matlab/run-command:
