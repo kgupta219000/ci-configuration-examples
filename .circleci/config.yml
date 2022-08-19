@@ -5,15 +5,7 @@ jobs:
   build:
     machine:
       image: ubuntu-2004:202201-02
-    steps:
-      - checkout
-      - matlab/install
-      - matlab/run-tests:
-          source-folder: code
-          test-results-junit: test-results/results.xml
-      - store_test_results:
-          path: test-results
-
+      
     working_directory: /tmp
     steps:
       - run:
@@ -29,6 +21,15 @@ jobs:
 
       - store_artifacts:
           path: /tmp/artifacts
+          
+    steps:
+      - checkout
+      - matlab/install
+      - matlab/run-tests:
+          source-folder: code
+          test-results-junit: test-results/results.xml
+      - store_test_results:
+          path: test-results
 
       # As an alternative to run-tests, you can use run-command to execute a MATLAB script, function, or statement.
       # - matlab/run-command:
