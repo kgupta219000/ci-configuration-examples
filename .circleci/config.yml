@@ -21,8 +21,7 @@ jobs:
 
       - store_artifacts:
           path: /tmp/artifacts
-          
-    steps:
+
       - checkout
       - matlab/install
       - matlab/run-tests:
