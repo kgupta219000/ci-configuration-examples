@@ -10,10 +10,10 @@ jobs:
     steps:
       - checkout
       
-      - run:
-          name: Creating Dummy Artifacts
-          command: |
-            mkdir /test-results;
+      #- run:
+       #   name: Creating Dummy Artifacts
+        #  command: |
+         #   mkdir /test-results;
 
       #- store_artifacts:
       #    path: /tmp/art-1
