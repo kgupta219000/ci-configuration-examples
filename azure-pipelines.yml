@@ -1,7 +1,7 @@
 pool:
   default
 steps:
-  - task: InstallMATLAB@0
+  #- task: InstallMATLAB@0
   - task: RunMATLABTests@0
     inputs:
       sourceFolder: code
