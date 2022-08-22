@@ -1,5 +1,5 @@
 pool:
-  name: VDIAgent
+  default
 steps:
   - task: InstallMATLAB@0
   - task: RunMATLABTests@0
