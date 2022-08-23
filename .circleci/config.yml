@@ -24,6 +24,8 @@ jobs:
       #    path: /tmp/artifacts
 
       - matlab/install
+      - matlab/run-command:
+          command: HelloWorld
       - matlab/run-tests:
           source-folder: code
           test-results-junit: test-results/matlab/results.xml
