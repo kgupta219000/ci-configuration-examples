@@ -1,7 +1,8 @@
 pool:
-  default
+  vmImage: ubuntu-latest
+  #default
 steps:
-  #- task: InstallMATLAB@0
+  - task: InstallMATLAB@0
   - task: RunMATLABCommand@0
     inputs:
       command: HelloWorld
