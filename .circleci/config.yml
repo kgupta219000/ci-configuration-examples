@@ -17,10 +17,6 @@ jobs:
           source-folder: code
           test-results-junit: test-results/results.xml
           code-coverage-cobertura: code-coverage/codeCoverage.xml
-      #- store_test_results:
-          #path: test-results
-      #- store_code_coverage:
-          #path: code-coverage
       - store_artifacts:
           path: test-results
           destination: test-results
