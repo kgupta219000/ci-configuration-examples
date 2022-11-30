@@ -40,12 +40,15 @@ jobs:
 #         with:
 #           source-folder: code
 
-      - name: Run MATLAB tests and generate artifacts
-        uses: matlab-actions/run-tests@v1
-        with:
-          source-folder: code
-          test-results-junit: test-results/results.xml
-          code-coverage-cobertura: code-coverage/coverage.xml
+#       - name: Run MATLAB tests and generate artifacts
+#         uses: matlab-actions/run-tests@v1
+#         with:
+#           source-folder: code
+#           test-results-junit: test-results/results.xml
+#           code-coverage-cobertura: code-coverage/coverage.xml
+
+      - name: Bash script
+        run: matlab -batch pwd
 
       - name: Upload test results artifact
         uses: actions/upload-artifact@v2
