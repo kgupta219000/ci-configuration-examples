@@ -23,7 +23,7 @@ jobs:
     # using: 'docker'
       image: 'mathworks/matlab'
       volumes:
-        - ${{ github.workspace }}
+        - ${{ github.workspace }}:/app
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
